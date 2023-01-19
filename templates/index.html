@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8bcd2e45fa.js" crossorigin="anonymous"></script>
     <title>QR Generator</title>
 </head>
 <body>
     <div class="title">
         <h1>QR Code Generator 🔥</h1>
         <h2>Insert a link below to generate a QR code for it.</h2>
+        <br>
     </div>
     <form action="/" method="POST">
         <input type="text" name="link" >
         <button type="submit" >Get QR</button>
     </form>
+    <br>
     {% if data %}
     <div class="generated">
         <img src="{{data}}" alt="" id="qrcode" >
         <p id="below-qr" >Here is the QR code we generated for you 🚀</p>
     </div>
     {% endif %}
+
+    <div class="footer">
+            <a href="https://github.com/jainam03/QR-genrator.git" target="_blank">
+                <i class="fa fa-github fa-2x" id="github-icon" ></i>
+            </a>
+        </i>
+    </div>
 </body>
 </html>
 
@@ -68,6 +78,9 @@
         border: none;
         outline: none;
 
+        border: none;
+        border-radius: 0.5rem;
+
         transition: 0.4s;
     }
 
@@ -114,5 +127,15 @@
         margin-top: 30px;
         text-align: center;
         color: skyblue;
+    }
+
+    a {
+        color: skyblue;
+        margin-top: 20px;
+
+        display: flex;
+        justify-content: center;
+
+        text-decoration: none;
     }
 </style>
